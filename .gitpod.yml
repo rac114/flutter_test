@@ -3,11 +3,13 @@ image: gitpod/workspace-full
 tasks:
   - init: |
       git clone https://github.com/flutter/flutter.git -b stable ~/flutter
+      echo 'export PATH=$PATH:$HOME/flutter/bin' >> ~/.bashrc
+      source ~/.bashrc
+      flutter doctor
     command: |
-      export PATH="$PATH:$HOME/flutter/bin"
-      cd myapp
+      cd my_flutter_app
       flutter pub get
-      flutter run -d web-server
+      flutter run -d web
 
 vscode:
   extensions:
