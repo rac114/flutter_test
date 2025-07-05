@@ -9,7 +9,7 @@ tasks:
       flutter doctor
       flutter create myapp
       cd myapp
-      flutter run -d web
+      flutter run -d web-server
 
 vscode:
   extensions:
