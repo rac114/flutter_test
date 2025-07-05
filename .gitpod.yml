@@ -1,0 +1,14 @@
+image: gitpod/workspace-full
+
+tasks:
+  - init: |
+      git clone https://github.com/flutter/flutter.git -b stable ~/flutter
+    command: |
+      export PATH="$PATH:$HOME/flutter/bin"
+      cd myapp
+      flutter pub get
+      flutter run -d web-server
+
+vscode:
+  extensions:
+    - dart-code.flutter
