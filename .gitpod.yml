@@ -5,6 +5,7 @@ tasks:
       git clone https://github.com/flutter/flutter.git -b stable ~/flutter
     command: |
       export PATH="$PATH:$HOME/flutter/bin"
+      flutter config --enable-web
       flutter doctor
       flutter create myapp
       cd myapp
